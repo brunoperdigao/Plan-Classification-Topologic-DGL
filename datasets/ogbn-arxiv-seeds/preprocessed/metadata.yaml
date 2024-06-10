@@ -1,0 +1,59 @@
+dataset_name: ogbn-arxiv
+feature_data:
+- domain: node
+  format: numpy
+  in_memory: true
+  name: feat
+  path: preprocessed/data/node-feat.npy
+  type: null
+- domain: node
+  format: numpy
+  in_memory: true
+  name: label
+  path: preprocessed/data/node-label.npy
+  type: null
+- domain: node
+  format: numpy
+  in_memory: true
+  name: year
+  path: preprocessed/data/node-year.npy
+  type: null
+graph_topology:
+  path: preprocessed/fused_csc_sampling_graph.pt
+  type: FusedCSCSamplingGraph
+tasks:
+- name: node_classification
+  num_classes: 40
+  test_set:
+  - data:
+    - format: numpy
+      in_memory: true
+      name: seeds
+      path: preprocessed/set/test_node.npy
+    - format: numpy
+      in_memory: true
+      name: labels
+      path: preprocessed/set/test_label.npy
+    type_name: null
+  train_set:
+  - data:
+    - format: numpy
+      in_memory: true
+      name: seeds
+      path: preprocessed/set/train_node.npy
+    - format: numpy
+      in_memory: true
+      name: labels
+      path: preprocessed/set/train_label.npy
+    type_name: null
+  validation_set:
+  - data:
+    - format: numpy
+      in_memory: true
+      name: seeds
+      path: preprocessed/set/valid_node.npy
+    - format: numpy
+      in_memory: true
+      name: labels
+      path: preprocessed/set/valid_label.npy
+    type_name: null
