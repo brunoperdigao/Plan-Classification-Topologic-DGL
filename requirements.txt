@@ -29,7 +29,7 @@ honeybee-standards==2.0.6
 httpcore==1.0.4
 httpx==0.27.0
 idna==3.6
-ifcopenshell==0.7.0.231218
+ifcopenshell
 ipykernel==6.29.3
 ipython==8.22.2
 ipywidgets==8.1.2
